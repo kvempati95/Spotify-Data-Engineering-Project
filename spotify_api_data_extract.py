@@ -30,7 +30,7 @@ def lambda_handler(event, context):
     filename = "spotify_raw_" + str(datetime.now()) + ".json"
     
     cilent.put_object(
-        Bucket = "spotift-etl-project-kushank",
+        Bucket = "spotift-etl-project-kavya",
         Key = "raw_data/to_processed/" + filename,
         Body = json.dumps(spotify_data)
         )
