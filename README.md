@@ -20,3 +20,6 @@ This API contains information about music artists, albums, and songs - [Spotify 
 **AWS Glue Data Catalog**: Fully managed service created by Glue Crawler, automatically identifying data formats and inferring schemas to create a catalog that integrates with other AWS services like Athena.
 
 **Amazon Athena:** Interactive query service for analyzing data in Amazon S3 using standard SQL, can utilize the Glue Catalog or other S3 buckets for analysis.
+
+## Project Execution Flow
+Extract Data from API -> Lambda Trigger (Every 1 Hour) -> Run extract Code -> Store Raw Data -> Trigger Transformation Function -> Transform Data and Load it -> Query using Athena.
